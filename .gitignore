@@ -22,3 +22,6 @@ Enterobacteria/
 # GenBank sequences in Pectobacterium and Dickeya directories
 Pectobacterium/*_uid*.fna
 Dickeya/*_uid*.fna
+
+# Misc other files
+nucmer.error
