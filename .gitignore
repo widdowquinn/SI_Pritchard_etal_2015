@@ -15,6 +15,10 @@ ANIm_SRE/
 ANIm_Pecto/
 ANIm_Dickeya/
 
+# Genome directories other than Dickeya/Pectobacterium
+SRE/
+Enterobacteria/
+
 # GenBank sequences in Pectobacterium and Dickeya directories
 Pectobacterium/*_uid*.fna
 Dickeya/*_uid*.fna
