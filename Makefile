@@ -34,6 +34,7 @@ clean: clean_genomes clean_output clean_SGE
 
 clean_genomes:
 	rm -rf GenBank GenBank_concatenated SRE Enterobacteria
+	rm downloads_complete
 
 clean_output:
 	rm -rf ANIm_Dickeya ANIm_Pecto ANIm_SRE ANIm_Entero
@@ -42,11 +43,12 @@ clean_output:
 clean_SGE:
 	rm -rf jobs output stderr stdout
 
-data:
+data: downloads_complete
 	./get_fna.sh
 	./concatenate_sequences.sh
 	./group_genomes.sh
 	./create_class_files.sh
+	touch downloads_complete
 
 ANIm_Entero:
 	$(ANISCRIPT) -i Enterobacteria/ -v \
