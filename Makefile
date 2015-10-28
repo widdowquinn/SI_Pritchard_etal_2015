@@ -28,7 +28,9 @@
 ANISCRIPT=average_nucleotide_identity.py
 SCHEDULER=multiprocessing
 
-all: data ANIm_Dickeya ANIm_Pecto ANIm_SRE ANIm_Entero copy_files
+all: data analysis
+
+analysis: ANIm_Dickeya ANIm_Pecto ANIm_SRE ANIm_Entero copy_files
 
 clean: clean_genomes clean_output clean_SGE
 
@@ -43,12 +45,11 @@ clean_output:
 clean_SGE:
 	rm -rf jobs output stderr stdout
 
-data: downloads_complete
+data: 
 	./get_fna.sh
 	./concatenate_sequences.sh
 	./group_genomes.sh
 	./create_class_files.sh
-	touch downloads_complete
 
 ANIm_Entero:
 	$(ANISCRIPT) -i Enterobacteria/ -v \
