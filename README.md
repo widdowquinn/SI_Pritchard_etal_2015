@@ -4,7 +4,7 @@ This repository contains supplementary information associated with the manuscrip
 
 ## Overview 
 
-This repository contains supplementary information and code to reproduce all main and Supplementary figures and tables from the Pritchard *et al.* (2015) manuscript:
+This repository contains supplementary information and code to reproduce all main and supplementary figures and tables from the Pritchard *et al.* (2015) manuscript:
 
 * Figure 1: `Figure_1_figure_anim_pid_pecto.pdf`
 * Figure 2: `Figure_2_figure_anim_pid_dickeya.pdf`
@@ -15,18 +15,35 @@ This repository contains supplementary information and code to reproduce all mai
 * Figure S3: `Figure_S3_figure_anim_cov_entero.pdf`
 * Figure S4: `Figure_S4_figure_anim_cov_sre.pdf`
 
+* Supplementary Table S2: `Table_S2_figure_anim_pid_entero.tab`
+* Supplementary Table S3: `Table_S3_figure_anim_cov_entero.tab`
+* Supplementary Table S4: `Table_S4_figure_anim_pid_sre.tab`
+* Supplementary Table S5: `Table_S5_figure_anim_cov_sre.tab`
+* Supplementary Table S6: `Table_S6_figure_anim_pid_dickeya.tab`
+* Supplementary Table S7: `Table_S7_figure_anim_cov_pecto.tab`
+* Supplementary Table S8: `Table_S8_figure_anim_pid_pecto.tab`
+* Supplementary Table S9: `Table_S9_figure_anim_cov_dickeya.tab`
+
 Supplementary data takes the form of the draft genome sequences used in this analysis. These are located in the directories `Dickeya` and `Pectobacterium`, and are sequences in FASTA format.
 
 ### Generating Figures and Tables
 
-To recreate all the analysis and generate the figures and tables, you need to have working copies of [`pyani`](https://github.com/widdowquinn/pyani) and [Make](https://www.gnu.org/software/make/) installed on your system.
+To recreate all the analysis and generate the figures and tables, you need to have working copies of [`pyani`](https://github.com/widdowquinn/pyani) and [`Make`](https://www.gnu.org/software/make/) installed on your system.
 
 1. Clone this repository to your machine with, e.g. `git clone https://github.com/widdowquinn/SI_Pritchard_etal_2015.git`
 2. Change to this repository's root directory
 3. To build all tables and figures, issue `make all` at the command-line
 
-The analysis may take some time, especially if you are running this code on a laptop or desktop machine, as it recreates the entire analysis short of generating Excel spreadsheets from plain text tabular output files.
+The analysis may take some time, especially if you are running this code on a laptop or desktop machine, as it recreates the entire analysis short of generating Excel spreadsheets from plain text tabular output files. On our 180-core cluster, the analysis takes around four hours.
 
+All output files are placed, by default, in the `figures_and_tables` subdirectory.
+
+If you prefer, you can run the data download and analysis separately, with:
+
+```
+make data
+make analysis
+```
 
 ## Manuscript Summary
 
