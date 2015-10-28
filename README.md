@@ -17,7 +17,6 @@ This repository contains supplementary information and code to reproduce all mai
 
 Supplementary data takes the form of the draft genome sequences used in this analysis. These are located in the directories `Dickeya` and `Pectobacterium`, and are sequences in FASTA format.
 
-
 ### Generating Figures and Tables
 
 To recreate all the analysis and generate the figures and tables, you need to have working copies of [`pyani`](https://github.com/widdowquinn/pyani) and [Make](https://www.gnu.org/software/make/) installed on your system.
@@ -41,4 +40,4 @@ By contrast, the whole genome of a prokaryote (chromosome and other sequences, s
 
 With the increasingly affordable advent of high-throughput sequencing, we are now in a position where many prokaryotic genomes can be sequenced, and a measure of the range of genome variation accurately determined. This could lead to an objective, accurate quantifiable definition of prokaryotic *genus* and *species*. Such definitions would improve legislative decisions, and diagnostic tools.
 
-The manuscript generates such a classification for the soft rot enterobacteria (SREs) *Erwinia*, *Dickeya*, and *Pectobacterium*, demonstrating that whole-genome sequence (WGS) classifications would set different boundaries between genera and species than have been determined by polyphasic analysis.
+The manuscript generates such a classification for the Enterobacteriacea, including the plant pathogens and soft rot enterobacteria (SREs): *Erwinia*, *Dickeya*, and *Pectobacterium*. The analyses demonstrate that whole-genome sequence (WGS) classifications would set different boundaries between genera and species than have been determined by polyphasic analysis.
