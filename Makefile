@@ -20,7 +20,7 @@
 # 		output, and SGE-associated files
 #
 # If average_nucleotide_identity.py is located somewhere other than your 
-# $PATH, then modify the ANISCRIPT macro accordingly.
+# $PATH, then you will need to modify the ANISCRIPT macro below, accordingly.
 #
 # If you wish to use the SGE scheduler, set SCHEDULER to SGE; if you would
 # prefer to use multiprocessing, then set SCHEDULER to multiprocessing
@@ -28,7 +28,7 @@
 ANISCRIPT=average_nucleotide_identity.py
 SCHEDULER=multiprocessing
 
-all: data ANIm_Entero
+all: data ANIm_Dickeya ANIm_Pecto ANIm_SRE ANIm_Entero copy_files
 
 clean: clean_genomes clean_output clean_SGE
 
@@ -67,5 +67,44 @@ ANIm_Dickeya:
 	$(ANISCRIPT) -i Dickeya/ -v \
 	  -o ANIm_Dickeya --scheduler $(SCHEDULER) -g -l ANIm_Dickeya.log \
 	  --force --classes dickeya_species.tab
+
+copy_files:
+	copy_figures copy_tables
+
+copy_figures:
+	cp ANIm_Pecto/ANIm_percentage_identity.pdf \
+	   ./Figure_1_figure_anim_pid_pecto.pdf
+	cp ANIm_Dickeya/ANIm_percentage_identity.pdf \
+	   ./Figure_2_figure_anim_pid_dickeya.pdf
+	cp ANIm_Pecto/ANIm_alignment_coverage.pdf \
+	   ./Figure_3_figure_anim_cov_pecto.pdf
+	cp ANIm_Dickeya/ANIm_alignment_coverage.pdf \
+	   ./Figure_4_figure_anim_cov_dickeya.pdf
+	cp ANIm_Entero/ANIm_percentage_identity.pdf \
+	   ./Figure_S1_figure_anim_pid_entero.pdf
+	cp ANIm_SRE/ANIm_percentage_identity.pdf \
+	   ./Figure_S2_figure_anim_pid_sre.pdf
+	cp ANIm_Entero/ANIm_alignment_coverage.pdf \
+	   ./Figure_S3_figure_anim_cov_entero.pdf
+	cp ANIm_SRE/ANIm_alignment_coverage.pdf \
+	   ./Figure_S4_figure_anim_cov_sre.pdf
+
+copy_tables:
+	cp ANIm_Pecto/ANIm_percentage_identity.tab \
+	   ./Table_S8_figure_anim_pid_pecto.tab
+	cp ANIm_Dickeya/ANIm_percentage_identity.tab \
+	   ./Table_S6_figure_anim_pid_dickeya.tab
+	cp ANIm_Pecto/ANIm_alignment_coverage.tab \
+	   ./Table_S7_figure_anim_cov_pecto.tab
+	cp ANIm_Dickeya/ANIm_alignment_coverage.tab \
+	   ./Table_S9_figure_anim_cov_dickeya.tab
+	cp ANIm_Entero/ANIm_percentage_identity.tab \
+	   ./Table_S2_figure_anim_pid_entero.tab
+	cp ANIm_SRE/ANIm_percentage_identity.tab \
+	   ./Table_S4_figure_anim_pid_sre.tab
+	cp ANIm_Entero/ANIm_alignment_coverage.tab \
+	   ./Table_S3_figure_anim_cov_entero.tab
+	cp ANIm_SRE/ANIm_alignment_coverage.tab \
+	   ./Table_S5_figure_anim_cov_sre.tab
 
 
