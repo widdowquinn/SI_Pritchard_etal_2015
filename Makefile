@@ -2,8 +2,13 @@
 #
 # Running with the following options will perform the associated tasks
 #
+# all:          will download and group all sequence data, then run ANIm on
+#               all sequence groups
+#
 # data:         download and group sequence data, and create label/class
 #               files for ANIm analysis
+#
+# analysis:	run ANIm on all sequence groups
 #
 # ANIm_Entero:  run ANIm on all Enterobacteriaceae sequences
 #
@@ -12,9 +17,6 @@
 # ANIm_Pecto:   run ANIm on all Pectobacterium sequences
 #
 # ANIm_Dickeya: run ANIm on all Dickeya sequences
-#
-# all:          will download and group all sequence data, then run ANIm on
-#               all Enterobacteriaceae sequences
 #
 # clean:	will remove all downloaded genome file directories, all ANIm
 # 		output, and SGE-associated files
