@@ -29,6 +29,7 @@
 
 ANISCRIPT=average_nucleotide_identity.py
 SCHEDULER=multiprocessing
+OUTDIR=figures_and_tables
 
 all: data analysis
 
@@ -78,38 +79,38 @@ copy_files:
 
 copy_figures:
 	cp ANIm_Pecto/ANIm_percentage_identity.pdf \
-	   ./Figure_1_figure_anim_pid_pecto.pdf
+	   $(OUTDIR)/Figure_1_figure_anim_pid_pecto.pdf
 	cp ANIm_Dickeya/ANIm_percentage_identity.pdf \
-	   ./Figure_2_figure_anim_pid_dickeya.pdf
+	   $(OUTDIR)/Figure_2_figure_anim_pid_dickeya.pdf
 	cp ANIm_Pecto/ANIm_alignment_coverage.pdf \
-	   ./Figure_3_figure_anim_cov_pecto.pdf
+	   $(OUTDIR)/Figure_3_figure_anim_cov_pecto.pdf
 	cp ANIm_Dickeya/ANIm_alignment_coverage.pdf \
-	   ./Figure_4_figure_anim_cov_dickeya.pdf
+	   $(OUTDIR)/Figure_4_figure_anim_cov_dickeya.pdf
 	cp ANIm_Entero/ANIm_percentage_identity.pdf \
-	   ./Figure_S1_figure_anim_pid_entero.pdf
+	   $(OUTDIR)/Figure_S1_figure_anim_pid_entero.pdf
 	cp ANIm_SRE/ANIm_percentage_identity.pdf \
-	   ./Figure_S2_figure_anim_pid_sre.pdf
+	   $(OUTDIR)/Figure_S2_figure_anim_pid_sre.pdf
 	cp ANIm_Entero/ANIm_alignment_coverage.pdf \
-	   ./Figure_S3_figure_anim_cov_entero.pdf
+	   $(OUTDIR)/Figure_S3_figure_anim_cov_entero.pdf
 	cp ANIm_SRE/ANIm_alignment_coverage.pdf \
-	   ./Figure_S4_figure_anim_cov_sre.pdf
+	   $(OUTDIR)/Figure_S4_figure_anim_cov_sre.pdf
 
 copy_tables:
 	cp ANIm_Pecto/ANIm_percentage_identity.tab \
-	   ./Table_S8_figure_anim_pid_pecto.tab
+	   $(OUTDIR)/Table_S8_figure_anim_pid_pecto.tab
 	cp ANIm_Dickeya/ANIm_percentage_identity.tab \
-	   ./Table_S6_figure_anim_pid_dickeya.tab
+	   $(OUTDIR)/Table_S6_figure_anim_pid_dickeya.tab
 	cp ANIm_Pecto/ANIm_alignment_coverage.tab \
-	   ./Table_S7_figure_anim_cov_pecto.tab
+	   $(OUTDIR)/Table_S7_figure_anim_cov_pecto.tab
 	cp ANIm_Dickeya/ANIm_alignment_coverage.tab \
-	   ./Table_S9_figure_anim_cov_dickeya.tab
+	   $(OUTDIR)/Table_S9_figure_anim_cov_dickeya.tab
 	cp ANIm_Entero/ANIm_percentage_identity.tab \
-	   ./Table_S2_figure_anim_pid_entero.tab
+	   $(OUTDIR)/Table_S2_figure_anim_pid_entero.tab
 	cp ANIm_SRE/ANIm_percentage_identity.tab \
-	   ./Table_S4_figure_anim_pid_sre.tab
+	   $(OUTDIR)/Table_S4_figure_anim_pid_sre.tab
 	cp ANIm_Entero/ANIm_alignment_coverage.tab \
-	   ./Table_S3_figure_anim_cov_entero.tab
+	   $(OUTDIR)/Table_S3_figure_anim_cov_entero.tab
 	cp ANIm_SRE/ANIm_alignment_coverage.tab \
-	   ./Table_S5_figure_anim_cov_sre.tab
+	   $(OUTDIR)/Table_S5_figure_anim_cov_sre.tab
 
 
