@@ -74,8 +74,7 @@ ANIm_Dickeya:
 	  -o ANIm_Dickeya --scheduler $(SCHEDULER) -g -l ANIm_Dickeya.log \
 	  --force --classes dickeya_species.tab
 
-copy_files:
-	copy_figures copy_tables
+copy_files: copy_figures copy_tables
 
 copy_figures:
 	cp ANIm_Pecto/ANIm_percentage_identity.pdf \
