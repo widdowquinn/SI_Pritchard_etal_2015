@@ -57,22 +57,26 @@ data:
 ANIm_Entero:
 	$(ANISCRIPT) -i Enterobacteria/ -v \
 	  -o ANIm_Entero --scheduler $(SCHEDULER) -g -l ANIm_Entero.log \
-	  --force --classes entero_genus.tab --labels entero_species.tab
+	  --force --classes entero_genus.tab --labels entero_species.tab \
+	  --gformat pdf,png,eps
 
 ANIm_SRE:
 	$(ANISCRIPT) -i SRE/ -v \
 	  -o ANIm_SRE --scheduler $(SCHEDULER) -g -l ANIm_SRE.log \
-	  --force --classes sre_genus.tab
+	  --force --classes sre_genus.tab \
+	  --gformat pdf,png,eps
 
 ANIm_Pecto:
 	$(ANISCRIPT) -i Pectobacterium/ -v \
 	  -o ANIm_Pecto --scheduler $(SCHEDULER) -g -l ANIm_Pecto.log \
-	  --force --classes pecto_species.tab
+	  --force --classes pecto_species.tab \
+	  --gformat pdf,png,eps
 
 ANIm_Dickeya:
 	$(ANISCRIPT) -i Dickeya/ -v \
 	  -o ANIm_Dickeya --scheduler $(SCHEDULER) -g -l ANIm_Dickeya.log \
-	  --force --classes dickeya_species.tab
+	  --force --classes dickeya_species.tab \
+	  --gformat pdf,png,eps
 
 copy_files: copy_figures copy_tables
 
