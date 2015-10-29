@@ -81,6 +81,7 @@ ANIm_Dickeya:
 copy_files: copy_figures copy_tables
 
 copy_figures:
+	mkdir -p $(OUTDIR)
 	cp ANIm_Pecto/ANIm_percentage_identity.pdf \
 	   $(OUTDIR)/Figure_1_figure_anim_pid_pecto.pdf
 	cp ANIm_Dickeya/ANIm_percentage_identity.pdf \
@@ -99,6 +100,7 @@ copy_figures:
 	   $(OUTDIR)/Figure_S4_figure_anim_cov_sre.pdf
 
 copy_tables:
+	mkdir -p $(OUTDIR)
 	cp ANIm_Pecto/ANIm_percentage_identity.tab \
 	   $(OUTDIR)/Table_S8_figure_anim_pid_pecto.tab
 	cp ANIm_Dickeya/ANIm_percentage_identity.tab \
